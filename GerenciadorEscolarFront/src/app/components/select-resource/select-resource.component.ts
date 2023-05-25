@@ -25,6 +25,7 @@ export class SelectResourceComponent implements OnInit {
     switch(this.selectedOption){
       case 'class':
         this.selectService.setUserChoice('Turma');
+        //if com info do localstorage
         this.router.navigate(['/get-resource']);
         break;
       case 'classSchedule':

@@ -13,7 +13,12 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  selectResource(){
+  selectResource(infoBtn : string){
+    localStorage.setItem('informationHome', infoBtn);
+
     this.router.navigate(['/select-resource'])
   }
+
+
+
 }
