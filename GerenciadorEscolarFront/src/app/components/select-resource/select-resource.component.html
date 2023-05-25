@@ -1,0 +1,71 @@
+<section class="container excluir-pensamentos">
+  <div class="modal">
+      <h2>Escolha um recurso</h2>
+      <div class="container-divs-choices">
+        <form class="form">
+          <div  class="choice">
+            <label for="class">
+              <input
+                type="radio"
+                id="class"
+                value="class"
+                name="modelo-card"
+                [(ngModel)]="selectedOption"
+              > Turma
+            </label>
+          </div>
+
+          <div  class="choice">
+            <label for="classSchedule">
+              <input
+                type="radio"
+                id="classSchedule"
+                value="classSchedule"
+                name="modelo-card"
+              > Aula
+            </label>
+          </div>
+
+          <div  class="choice">
+            <label for="student">
+              <input
+                type="radio"
+                id="student"
+                value="student"
+                name="modelo-card"
+              > Estudante
+            </label>
+          </div>
+
+          <div  class="choice">
+            <label for="subject">
+              <input
+                type="radio"
+                id="subject"
+                value="subject"
+                name="modelo-card"
+              > Disciplina
+            </label>
+          </div>
+
+          <div  class="choice">
+            <label for="teacher">
+              <input
+                type="radio"
+                id="teacher"
+                value="teacher"
+                name="modelo-card"
+              > Professor
+            </label>
+          </div>
+        </form>
+      </div>
+
+      <div class="btn">
+        <button (click)="backToHome()" >Voltar</button>
+        <button (click)="toContinue()" >Prosseguir</button>
+      </div>
+
+  </div>
+  <div class="overlay"></div>
+</section>

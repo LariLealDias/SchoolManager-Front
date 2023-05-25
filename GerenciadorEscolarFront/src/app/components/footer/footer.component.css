@@ -1,0 +1,26 @@
+
+.footer {
+  background-color: rgb(155, 99, 99);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.TextCopyright {
+
+}
+
+.LogoRodape {
+  justify-self: center;
+}
+.linkedin{
+  width: 30px;
+  height: 30px;
+}
+.github{
+  width: 30px;
+  height: 30px;
+  margin-left: 50px;
+}
+
