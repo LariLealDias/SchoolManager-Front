@@ -1,8 +1,19 @@
 <section>
   <div>
     <h2>Todos os objetos de {{ userChoice }}</h2>
-    <div>
-      <p>Lista com todos os recursos</p>
-    </div>
   </div>
+
+    <div class="center-container" *ngIf="readClass.length > 0, else emptyArrayReadClass">
+      <div *ngFor="let oneResource of readClass">
+        <app-resource [resource]="oneResource"></app-resource>
+      </div>
+    </div>
+
 </section>
+
+<ng-template #emptyArrayReadClass>
+  <div>
+    <p>A lista de recursos do tipo {{ userChoice }} está vazia</p>
+  </div>
+</ng-template>
+

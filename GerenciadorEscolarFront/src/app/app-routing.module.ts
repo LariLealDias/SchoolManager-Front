@@ -13,7 +13,7 @@ const routes: Routes = [
     path: 'select-resource',
     component: SelectResourceComponent
   },{
-    path: 'get-resource',
+    path: 'get-resource/:value',
     component: GetResourceComponent
   }
 ];

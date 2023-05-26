@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { SelectService } from 'src/app/service/Data/select-resource/select.service';
-import { Observable } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
+import { Class } from 'src/app/service/API/service-class/class';
+import { ClassService } from 'src/app/service/API/service-class/class.service';
 
 
 @Component({
@@ -11,10 +12,13 @@ import { Observable } from 'rxjs';
 export class GetResourceComponent implements OnInit {
   userChoice!: string;
   informationHome : string | null;
+  readClass : Class[] = [];
 
 
-  constructor(private selectService: SelectService) {
-    // this.userChoice = selectService.getUserChoice();
+  constructor(
+    private classService : ClassService,
+    private route : ActivatedRoute
+    ) {
     this.informationHome = localStorage.getItem('informationHome');
     console.log(this.informationHome);
   }
@@ -23,18 +27,22 @@ export class GetResourceComponent implements OnInit {
 
   ngOnInit(): void {
     this.getUserChoice();
-    this.getByResource();
   }
 
-  getUserChoice(): string{
-    this.userChoice = this.selectService.getUserChoice();
-    return this.userChoice;
+  getUserChoice(): void{
+    this.route.params.subscribe(params => {
+      this.userChoice = params['value'];
+      this.getByResource();
+    });
   }
 
   getByResource(){
-    if(this.informationHome == 'create'){
-      alert();
+    if(this.informationHome == 'read' && this.userChoice == 'Turma'){
+      this.classService.read().subscribe((arrayOfClassRead =>{
+        this.readClass = arrayOfClassRead;
+      }));
     }
+
   }
 
 

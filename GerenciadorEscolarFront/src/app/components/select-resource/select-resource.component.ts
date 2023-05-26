@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./select-resource.component.css']
 })
 export class SelectResourceComponent implements OnInit {
-  selectedOption: string = '';
+  selectedOption!: string ;
 
   constructor(
     private router: Router,
@@ -24,9 +24,9 @@ export class SelectResourceComponent implements OnInit {
   toContinue(){
     switch(this.selectedOption){
       case 'class':
-        this.selectService.setUserChoice('Turma');
+        // this.selectService.setUserChoice('Turma');
         //if com info do localstorage
-        this.router.navigate(['/get-resource']);
+        this.router.navigate(['/get-resource/Turma']);
         break;
       case 'classSchedule':
         alert();
