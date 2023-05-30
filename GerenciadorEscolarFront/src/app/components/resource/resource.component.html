@@ -1,6 +1,17 @@
-<div class="container-resource">
-  <p><b>ID:</b> {{ resource.id }}</p>
-  <p>Grade:  {{ resource.grade }}</p>
-  <p>section:  {{ resource.section }}</p>
-  <p>shift:  {{ resource.shift }}</p>
-</div>
+ <div class="container">
+   <div *ngIf="getResource.getCombinationReadPlusTurma()" class="content">
+      <p><b>ID:</b> {{ resourceClass.id }}</p>
+      <p>Ano:  {{ resourceClass.grade }}</p>
+      <p>Categoria:  {{ resourceClass.section }}</p>
+      <p>Turno:  {{ resourceClass.shift }}</p>
+    </div>
+
+    <div *ngIf="getResource.getCombinationReadPlusEstudante()" class="content">
+      <p><b>ID:</b> {{ resourceStudent.id }}</p>
+      <p>Primeiro nome: {{ resourceStudent.firstName }}</p>
+      <p>Ultimo nome: {{ resourceStudent.lastName }}</p>
+      <p>Email: {{ resourceStudent.email }}</p>
+      <p>Telefone: {{ resourceStudent.phoneNumber }}</p>
+      <p>Data de nascimento: {{ resourceStudent.birthDate }}</p>
+    </div>
+ </div>

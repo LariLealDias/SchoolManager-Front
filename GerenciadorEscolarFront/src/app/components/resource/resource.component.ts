@@ -1,5 +1,7 @@
+import { GetResourceComponent } from './../../pages/get-resource/get-resource.component';
 import { Component, Input,OnInit} from '@angular/core';
 import { Class } from 'src/app/service/API/service-class/class';
+import { Student } from 'src/app/service/API/service-student/student';
 
 @Component({
   selector: 'app-resource',
@@ -7,16 +9,30 @@ import { Class } from 'src/app/service/API/service-class/class';
   styleUrls: ['./resource.component.css']
 })
 export class ResourceComponent implements OnInit {
- @Input() resource : Class = {
-  id: 0,
-  grade: '',
-  section: '',
-  shift: '',
+ @Input() resourceClass : Class = {
+    id: 0,
+    grade: '',
+    section: '',
+    shift: '',
   }
 
-  constructor() { }
+  @Input() resourceStudent : Student = {
+    id: 0,
+    firstName: '',
+    lastName: '',
+    email: '',
+    phoneNumber: 0,
+    birthDate: new Date()
+  }
+
+
+  constructor(
+    public getResource : GetResourceComponent
+  ) { }
 
   ngOnInit(): void {
+
   }
+
 
 }

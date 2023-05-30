@@ -7,22 +7,57 @@
   margin-top: 20px;
 }
 
-.center-container{
+.container{
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  margin-top: 15px;
+  width: 100%;
 
 }
 
-.empty-array-readClass{
+.center-content{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 15px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 500px;
+  max-height: 300px;
+}
+.center-content::-webkit-scrollbar{
+  width: 5px;
+  border: 1px solid rgb(173, 134, 134);
+  border-radius: 5px;
+}
+.center-content::-webkit-scrollbar-thumb{
+  background-color: #bba1bb;
+  border-radius: 6px;
+}
+
+.btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+
+}
+.btn button{
+  width: 150px;
+  height: 25px;
+  border-radius: 15px;
+  border-style: none;
+  background-color: #bba1bb;
+  cursor: pointer;
+}
+
+.empty-array-read{
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 50px ;
 }
-.empty-array-readClass p{
+.empty-array-read p{
   display: flex;
   align-items: center;
   justify-content: center;

@@ -15,7 +15,6 @@ export class HomeComponent implements OnInit {
 
   selectResource(infoBtn : string){
     localStorage.setItem('informationHome', infoBtn);
-
     this.router.navigate(['/select-resource'])
   }
 

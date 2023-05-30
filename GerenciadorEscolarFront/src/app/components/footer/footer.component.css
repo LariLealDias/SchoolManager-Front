@@ -5,6 +5,8 @@
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   padding: 1rem 2rem;
+  position: relative;
+  z-index: 10;
 }
 
 .TextCopyright {

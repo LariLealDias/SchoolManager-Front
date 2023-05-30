@@ -1,18 +1,32 @@
 <section>
   <div class="title-page-get-resource">
-    <h2>Todos os objetos de {{ userChoice }}</h2>
+    <h2>Todas instâncias de {{ userChoice }}</h2>
   </div>
 
-    <div class="center-container" *ngIf="readClass.length > 0, else emptyArrayReadClass">
-      <div *ngFor="let oneResource of readClass">
-        <app-resource [resource]="oneResource"></app-resource>
-      </div>
+<div *ngIf="getCombinationReadPlusTurma()" class="container">
+  <div class="center-content" *ngIf="readClass.length > 0, else emptyArrayRead">
+    <div *ngFor="let oneResource of readClass" >
+      <app-resource [resourceClass]="oneResource"></app-resource>
     </div>
+  </div>
+</div>
+
+<div *ngIf="getCombinationReadPlusEstudante()" class="container">
+  <div class="center-content" *ngIf="readStudent.length > 0, else emptyArrayRead">
+    <div *ngFor="let oneResource of readStudent">
+      <app-resource [resourceStudent]="oneResource"></app-resource>
+    </div>
+  </div>
+</div>
+
+<div class="btn">
+  <button  (click)="backToSelect()">Voltar</button>
+</div>
 
 </section>
 
-<ng-template #emptyArrayReadClass>
-  <div class="empty-array-readClass">
+<ng-template #emptyArrayRead>
+  <div class="empty-array-read">
     <p>A lista de recursos do tipo {{ userChoice }} está vazia</p>
   </div>
 </ng-template>

@@ -1,10 +1,19 @@
-.container-resource{
+
+.container{
+  /* overflow: scroll */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.content{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 250px;
-  height: 100px;
+  width: 350px;
+  height: 150px;
   margin-top: 15px;
   border-radius: 15px;
   background-color: #e8e1e8;

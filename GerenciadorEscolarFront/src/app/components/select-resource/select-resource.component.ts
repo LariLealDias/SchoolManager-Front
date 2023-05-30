@@ -9,30 +9,39 @@ import { Router } from '@angular/router';
 })
 export class SelectResourceComponent implements OnInit {
   selectedOption!: string ;
+  informationHome : string | null;
+
 
   constructor(
     private router: Router,
-    private selectService: SelectService
-    ) { }
+    ) {
+      this.informationHome = localStorage.getItem('informationHome');
+     }
 
   ngOnInit(): void {
   }
 
   backToHome(){
-    this.router.navigate([''])
+    this.router.navigate(['']);
   }
   toContinue(){
     switch(this.selectedOption){
       case 'class':
-        // this.selectService.setUserChoice('Turma');
-        //if com info do localstorage
-        this.router.navigate(['/get-resource/Turma']);
+        if(this.informationHome == 'read'){
+          this.router.navigate(['/get-resource/Turma']);
+        }else if(this.informationHome == 'create'){
+          this.router.navigate(['/create-resource/Turma']);
+        }
         break;
       case 'classSchedule':
         alert();
         break;
       case 'student':
-        alert();
+        if(this.informationHome == 'read'){
+          this.router.navigate(['/get-resource/Estudante']);
+        }else if(this.informationHome == 'create'){
+          this.router.navigate(['/create-resource/Estudante']);
+        }
         break;
       case 'subject':
         alert();
@@ -40,7 +49,7 @@ export class SelectResourceComponent implements OnInit {
       case 'teacher':
         alert();
         break;
-      default: alert('Você precisa selecionar algo ante de enviar');
+      default: alert('Você precisa selecionar algo antes de enviar');
     }
   }
 

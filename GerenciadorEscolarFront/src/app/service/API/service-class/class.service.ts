@@ -15,4 +15,13 @@ export class ClassService {
   read(): Observable<Class[]>{
     return this.http.get<Class[]>(this.API);
   }
+
+  create(classInScholl: Class):Observable<Class>{
+    return this.http.post<Class>(this.API, classInScholl);
+  }
+
+  // criar(pensamento: Pensamento):Observable<Pensamento>{
+  //   return this.http.post<Pensamento>(this.API, pensamento);
+  // }
+
 }
