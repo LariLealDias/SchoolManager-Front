@@ -20,8 +20,5 @@ export class ClassService {
     return this.http.post<Class>(this.API, classInScholl);
   }
 
-  // criar(pensamento: Pensamento):Observable<Pensamento>{
-  //   return this.http.post<Pensamento>(this.API, pensamento);
-  // }
 
 }

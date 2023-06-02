@@ -2,6 +2,7 @@ import { GetResourceComponent } from './../../pages/get-resource/get-resource.co
 import { Component, Input,OnInit} from '@angular/core';
 import { Class } from 'src/app/service/API/service-class/class';
 import { Student } from 'src/app/service/API/service-student/student';
+import { Subject } from 'src/app/service/API/service-subject/subject';
 
 @Component({
   selector: 'app-resource',
@@ -23,6 +24,11 @@ export class ResourceComponent implements OnInit {
     email: '',
     phoneNumber: 0,
     birthDate: new Date()
+  }
+
+  @Input() resourceSubject : Subject = {
+    id: 0,
+    title: ''
   }
 
 

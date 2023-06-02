@@ -12,6 +12,7 @@ import { GetResourceComponent } from './pages/get-resource/get-resource.componen
 import { SelectService } from './service/Data/select-resource/select.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ResourceComponent } from './components/resource/resource.component';
+import { CreateResourceComponent } from './pages/create-resource/create-resource.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ResourceComponent } from './components/resource/resource.component';
     SelectResourceComponent,
     HomeComponent,
     GetResourceComponent,
-    ResourceComponent
+    ResourceComponent,
+    CreateResourceComponent
   ],
   imports: [
     BrowserModule,

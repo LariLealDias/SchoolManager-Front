@@ -19,6 +19,15 @@
   </div>
 </div>
 
+<div *ngIf="getCombinationReadPlusDisciplina()" class="container">
+  <div class="center-content" *ngIf="readSubject.length > 0, else emptyArrayRead">
+    <div *ngFor="let oneResource of readSubject">
+      <app-resource [resourceSubject]="oneResource"></app-resource>
+    </div>
+  </div>
+
+</div>
+
 <div class="btn">
   <button  (click)="backToSelect()">Voltar</button>
 </div>

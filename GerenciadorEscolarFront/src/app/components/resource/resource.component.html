@@ -14,4 +14,9 @@
       <p>Telefone: {{ resourceStudent.phoneNumber }}</p>
       <p>Data de nascimento: {{ resourceStudent.birthDate }}</p>
     </div>
+
+    <div *ngIf="getResource.getCombinationReadPlusDisciplina()" class="content">
+      <p><b>ID:</b> {{ resourceSubject.id }}</p>
+      <p>Titulo: {{ resourceSubject.title }}</p>
+    </div>
  </div>

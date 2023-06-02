@@ -1,9 +1,11 @@
+import { SubjectService } from './../../service/API/service-subject/subject.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Class } from 'src/app/service/API/service-class/class';
 import { ClassService } from 'src/app/service/API/service-class/class.service';
 import { Student } from 'src/app/service/API/service-student/student';
 import { StudentService } from 'src/app/service/API/service-student/student.service';
+import { Subject } from 'src/app/service/API/service-subject/subject';
 
 @Component({
   selector: 'app-get-resource',
@@ -15,11 +17,13 @@ export class GetResourceComponent implements OnInit {
   informationHome : string | null;
   readClass : Class[] = [];
   readStudent : Student[] = [];
+  readSubject : Subject[] = [];
 
 
   constructor(
     private classService : ClassService,
     private studentService : StudentService,
+    private subjectService : SubjectService,
     private route : ActivatedRoute,
     private router : Router
     ) {
@@ -46,8 +50,6 @@ export class GetResourceComponent implements OnInit {
   }
 
   getByResource(){
-    if(this.informationHome == 'read'){
-
       if(this.userChoice == 'Turma'){
         this.classService.read().subscribe((arrayOfClassRead =>{
           this.readClass = arrayOfClassRead;
@@ -58,22 +60,26 @@ export class GetResourceComponent implements OnInit {
           this.readStudent = arrayOfStudentRead;
         }));
       }
-    }
-    else if(this.informationHome == 'create'){
-      if(this.userChoice == 'Turma'){
-
+      if(this.userChoice == 'Disciplina'){
+          this.subjectService.read().subscribe(( arrayOfSubjectRead =>{
+            this.readSubject = arrayOfSubjectRead;
+        }))
       }
-    }
+
   }
 
 
 
   //ifs:
   public getCombinationReadPlusTurma(){
-    return this.informationHome == 'read' && this.userChoice == 'Turma';
+    return  this.userChoice == 'Turma';
   }
   public getCombinationReadPlusEstudante(){
-    return this.informationHome == 'read' && this.userChoice == 'Estudante';
+    return  this.userChoice == 'Estudante';
+  }
+
+  public getCombinationReadPlusDisciplina(){
+    return this.userChoice == 'Disciplina';
   }
 
 

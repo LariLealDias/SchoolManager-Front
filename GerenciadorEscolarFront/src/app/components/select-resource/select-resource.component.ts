@@ -44,7 +44,11 @@ export class SelectResourceComponent implements OnInit {
         }
         break;
       case 'subject':
-        alert();
+        if(this.informationHome == 'read'){
+          this.router.navigate(['/get-resource/Disciplina']);
+        }else if(this.informationHome == 'create'){
+          this.router.navigate(['/create-resource/Disciplina']);
+        }
         break;
       case 'teacher':
         alert();
