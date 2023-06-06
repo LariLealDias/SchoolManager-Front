@@ -18,7 +18,7 @@ export class GetResourceComponent implements OnInit {
   readClass : Class[] = [];
   readStudent : Student[] = [];
   readSubject : Subject[] = [];
-
+  skip: number = 0;
 
   constructor(
     private classService : ClassService,
@@ -71,16 +71,23 @@ export class GetResourceComponent implements OnInit {
 
 
   //ifs:
-  public getCombinationReadPlusTurma(){
+  public getChoiceTurma(){
     return  this.userChoice == 'Turma';
   }
-  public getCombinationReadPlusEstudante(){
+  public getChoiceEstudante(){
     return  this.userChoice == 'Estudante';
   }
 
-  public getCombinationReadPlusDisciplina(){
+  public getChoiceDisciplina(){
     return this.userChoice == 'Disciplina';
   }
 
 
+  //btn see more
+  getPagination(){
+    this.skip += 10;
+    this.subjectService.readWithSkip(this.skip).subscribe((arrayOfSubjectRead => {
+      this.readSubject = arrayOfSubjectRead;
+    }));
+  }
 }

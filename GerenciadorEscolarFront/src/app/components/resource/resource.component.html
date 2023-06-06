@@ -1,12 +1,12 @@
  <div class="container">
-   <div *ngIf="getResource.getCombinationReadPlusTurma()" class="content">
+   <div *ngIf="getResource.getChoiceTurma()" class="content">
       <p><b>ID:</b> {{ resourceClass.id }}</p>
       <p>Ano:  {{ resourceClass.grade }}</p>
       <p>Categoria:  {{ resourceClass.section }}</p>
       <p>Turno:  {{ resourceClass.shift }}</p>
     </div>
 
-    <div *ngIf="getResource.getCombinationReadPlusEstudante()" class="content">
+    <div *ngIf="getResource.getChoiceEstudante()" class="content">
       <p><b>ID:</b> {{ resourceStudent.id }}</p>
       <p>Primeiro nome: {{ resourceStudent.firstName }}</p>
       <p>Ultimo nome: {{ resourceStudent.lastName }}</p>
@@ -15,7 +15,7 @@
       <p>Data de nascimento: {{ resourceStudent.birthDate }}</p>
     </div>
 
-    <div *ngIf="getResource.getCombinationReadPlusDisciplina()" class="content">
+    <div *ngIf="getResource.getChoiceDisciplina()" class="content">
       <p><b>ID:</b> {{ resourceSubject.id }}</p>
       <p>Titulo: {{ resourceSubject.title }}</p>
     </div>

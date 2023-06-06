@@ -1,7 +1,7 @@
 import { Subject } from 'src/app/service/API/service-subject/subject';
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 
 
 @Injectable({
@@ -15,6 +15,11 @@ export class SubjectService {
 
   read() : Observable<Subject[]>{
     return this.http.get<Subject[]>(this.API);
+  }
+
+  readWithSkip(skip : number) : Observable<Subject[]>{
+    const params = new HttpParams().set('skip', skip.toString()).set('take', '10');
+    return this.http.get<Subject[]>(this.API, { params })
   }
 
   create(subject : Subject) : Observable<Subject>{

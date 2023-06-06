@@ -3,7 +3,7 @@
     <h2>Todas instâncias de {{ userChoice }}</h2>
   </div>
 
-<div *ngIf="getCombinationReadPlusTurma()" class="container">
+<div *ngIf="getChoiceTurma()" class="container">
   <div class="center-content" *ngIf="readClass.length > 0, else emptyArrayRead">
     <div *ngFor="let oneResource of readClass" >
       <app-resource [resourceClass]="oneResource"></app-resource>
@@ -11,7 +11,7 @@
   </div>
 </div>
 
-<div *ngIf="getCombinationReadPlusEstudante()" class="container">
+<div *ngIf="getChoiceEstudante()" class="container">
   <div class="center-content" *ngIf="readStudent.length > 0, else emptyArrayRead">
     <div *ngFor="let oneResource of readStudent">
       <app-resource [resourceStudent]="oneResource"></app-resource>
@@ -19,17 +19,17 @@
   </div>
 </div>
 
-<div *ngIf="getCombinationReadPlusDisciplina()" class="container">
+<div *ngIf="getChoiceDisciplina()" class="container">
   <div class="center-content" *ngIf="readSubject.length > 0, else emptyArrayRead">
     <div *ngFor="let oneResource of readSubject">
       <app-resource [resourceSubject]="oneResource"></app-resource>
     </div>
   </div>
-
 </div>
 
 <div class="btn">
   <button  (click)="backToSelect()">Voltar</button>
+  <button (click)="getPagination()"  > ver mais </button>
 </div>
 
 </section>
