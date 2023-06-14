@@ -1,16 +1,11 @@
-
 .footer {
-  background-color: rgb(155, 99, 99);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   padding: 1rem 2rem;
   position: relative;
   z-index: 10;
-}
-
-.TextCopyright {
-
+  color: #c7e0b6;
 }
 
 .LogoRodape {
