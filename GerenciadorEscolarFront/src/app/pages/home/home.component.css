@@ -7,7 +7,7 @@
 }
 .title-home h2{
   letter-spacing: 3px;
-  color: #87b48a;
+  color: rgb(187, 161, 187);
   font-weight: bold;
 }
 
@@ -46,7 +46,7 @@
   transition: 0.5s;
 }
 .btn:hover{
-  background-color: rgba(136, 150, 143, 0.5 );
+  background-color: rgba(187, 161, 187, 0.5 );
 
   -webkit-box-shadow:0px 0px 71px 0px rgba(134,191,204,0.34);
   -moz-box-shadow: 0px 0px 71px 0px rgba(134,191,204,0.34);

@@ -1,5 +1,4 @@
  .modal {
-  background: #fff;
   min-width: 380px;
   min-height: 150px;
   position: fixed;
@@ -13,8 +12,12 @@
   padding-top: 50px;
   border-radius: 15px;
 
-  background-color: #e8e1e8;
+  background-color: #e1e7e8;
 
+}
+
+.main-title{
+  color: #04656c;
 }
 
 .overlay {
@@ -50,6 +53,10 @@
  color: rgb(61, 26, 155);
 }
 
+.title-select{
+  margin-left: 8px;
+}
+
 .btn{
   margin-top: 20px;
   display: inline-block;
@@ -62,6 +69,13 @@
   background-color: #bba1bb;
   cursor: pointer;
   margin-left: 5px;
+
+  background: rgba(187, 161, 187, 0.774);
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 
