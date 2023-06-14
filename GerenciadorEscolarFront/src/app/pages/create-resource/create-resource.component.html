@@ -1,17 +1,21 @@
 <div class="container">
-  <div class="title"><h2>Insira a informação</h2></div>
+  <div class="container-title"><h2 class="global-title-page ff-Open-Sans-regular">Insira a informação</h2></div>
 
   <div class="form">
     <form>
-      <label>Titulo: </label>
-      <input placeholder=" Digite o titulo da disciplina"
-             name="title"
-             type="text"
-             id="title"
-             [(ngModel)]="subject.title">
+      <div class="container-input-label">
+        <label class="label-get-information ff-Open-Sans-regular">Titulo:</label>
+        <input placeholder=" Digite o titulo da disciplina"
+               name="title"
+               type="text"
+               id="title"
+               [(ngModel)]="subject.title">
+
+      </div>
 
       <div class="container-btn">
-        <button class="btn" type="submit" (click)="CreateResource()" >Criar</button>
+        <button class="btn global-btn" type="submit" (click)="CreateResource()" >Criar</button>
+        <button class="btn global-btn" routerLink="/select-resource">Voltar</button>
       </div>
 
     </form>

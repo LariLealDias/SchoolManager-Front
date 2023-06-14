@@ -28,8 +28,21 @@ body{
   font-style: italic;
 }
 
-.global-bnt{
+.global-btn{
+  border-radius: 10px;
+  border-style: none;
+  background-color: #bba1bb;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.global-btn:hover{
+  background-color: #e4d2e4;
+}
 
+.global-title-page{
+  letter-spacing: 3px;
+  color: rgb(187, 161, 187);
+  font-weight: bold;
 }
 
 
