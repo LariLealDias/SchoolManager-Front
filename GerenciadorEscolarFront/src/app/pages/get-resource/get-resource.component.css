@@ -1,10 +1,10 @@
-.title-page-get-resource{
+.container-title{
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.title-page-get-resource h2{
-  margin-top: 20px;
+.container-title h2{
+  margin-top: 90px;
 }
 
 .container{
@@ -12,7 +12,6 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-
 }
 
 .center-content{
@@ -25,6 +24,7 @@
   width: 500px;
   max-height: 300px;
 }
+
 .center-content::-webkit-scrollbar{
   width: 5px;
   border: 1px solid rgb(173, 134, 134);
@@ -35,20 +35,17 @@
   border-radius: 6px;
 }
 
-.btn{
+.container-btn{
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 40px;
 
 }
-.btn button{
-  width: 150px;
-  height: 25px;
-  border-radius: 15px;
-  border-style: none;
-  background-color: #bba1bb;
-  cursor: pointer;
+.container-btn button{
+  width: 100px;
+  height: 30px;
+  margin-left: 5px;
 }
 
 .empty-array-read{
@@ -64,8 +61,13 @@
   width: 350px;
   height: 100px;
   border-radius: 15px;
-  background-color: #e8e1e8;
-  box-shadow: 0px 4px 8px 1px rgba(148,108,171,1);
+
+  background: rgba( 255, 255, 255, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 

@@ -1,6 +1,6 @@
 <section>
-  <div class="title-page-get-resource">
-    <h2>Todas instâncias de {{ userChoice }}</h2>
+  <div class="container-title">
+    <h2 class="global-title-page">Todas instâncias de {{ userChoice }}</h2>
   </div>
 
 <div *ngIf="getChoiceTurma()" class="container">
@@ -27,16 +27,16 @@
   </div>
 </div>
 
-<div class="btn">
-  <button  (click)="backToSelect()">Voltar</button>
-  <button (click)="getPagination()"  > ver mais </button>
+<div class="container-btn">
+  <button class="global-btn" (click)="backToSelect()">Voltar</button>
+  <button class="global-btn" (click)="getPagination()">Ver mais</button>
 </div>
 
 </section>
 
 <ng-template #emptyArrayRead>
   <div class="empty-array-read">
-    <p>A lista de recursos do tipo {{ userChoice }} está vazia</p>
+    <p class="ff-Open-Sans-regular">A lista de recursos do tipo {{ userChoice }} está vazia</p>
   </div>
 </ng-template>
 
