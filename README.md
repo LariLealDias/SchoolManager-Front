@@ -8,7 +8,7 @@ Projeto frontend em Angular para a API SchooManager
 - Angular
 - Typescript
 #### Conceitos aplicados
-nfIf, ngClass, NgModel, service, providor, composição e reutilização de componentes e configurações de rotas
+ngIf, ngClass, NgModel, service, providor, composição e reutilização de componentes e configurações de rotas
 
 <br><br>
 ## 📝 DESCRIÇÃO
